@@ -41,7 +41,7 @@ def process_files():
             for i in range(len(files_df) - 1):
                 merged_df = pd.merge(merged_df, files_df[i + 1], on="SysTime")
 
-            merged_df = merged_df[merged_df != 0].dropna()
+            merged_df = merged_df[merged_df != 0].dropna() #drop rows with missing values
             print(base_path.replace('Dataset','output')+'\\'+files_path[p]+'_'+sub_files_path[q]+'.csv')
             # Export the DF into a file
             merged_df.to_csv(base_path.replace('Dataset','output')+'\\'+files_path[p]+'_'+sub_files_path[q]+'.csv', index=False, sep=';',)
