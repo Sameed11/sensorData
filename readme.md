@@ -9,3 +9,4 @@ Extract all the folders within the mentioned basePath
                 merge all CSVs into one based on SysTime
                 Write the final CSV back into the outputFile
 ```
+,..
